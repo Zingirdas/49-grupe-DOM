@@ -11,42 +11,44 @@ h1DOM[0].innerText = 'Paskutinis "pirmadienis" :(';
 
 const titleDOM = document.getElementsByTagName('title');
 titleDOM[0].innerText = 'AAAAAA';
-titleDOM[0].innerText = 'BBBBBB';
+
 
 // vienkartine logika
-setTimeout(() => {
-    console.log('Laikas - 1');
-}, 3000);
+// setTimeout(() => {
+//     console.log('Laikas - 1');
+// }, 3000);
 // timeout 3000 - nurodytas milisekundemis
 
 
 // daukartine logika
-setInterval(() => {
-    console.log('labas');
-}, 1000);
+// setInterval(() => {
+//     console.log('labas');
+// }, 1000);
 
 const clockDOM = document.getElementById('clock');
 
 clockDOM.innerText = '0:0';
 
 let i = 0;
-setInterval(() => {
-    i++;
+// setInterval(() => {
+//     i++;
 
-    const s = i % 60;
-    const m = (i - s) / 60;
+//     const s = i % 60;
+//     const m = (i - s) / 60;
 
-    clockDOM.innerText = `${m}:${s < 10 ? '0' : ''} ${s}`;
-}, 1000);
+//     clockDOM.innerText = `${m}:${s < 10 ? '0' : ''} ${s}`;
+// }, stop 50);
 
 // requestAnimationFrame - jei reikia tikslesnio laikrodzio parodymo;
-
+let count = 0;
 setInterval(() => {
     count++;
+    console.log('count');
+
     if (count % 2 === 0) {
         titleDOM[0].innerText = 'DOM';
     } else {
         titleDOM[0].innerText = '***New message***';
     }
-}, 1000);
+}, 500);
 
